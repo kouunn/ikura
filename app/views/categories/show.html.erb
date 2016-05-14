@@ -568,7 +568,7 @@
                 <% @category.products.each do |product| %>
                   <%= link_to product do %>
                     <li>
-                    <img src="images/m1.jpg" title="" alt="" />
+                    <%= image_tag product.avatars[0].url %>
                     <section class="list-left">
                     <h5 class="title"><%= product.name_cn %></h5>
                     <span class="adprice">￥<%= product.price %></span>
