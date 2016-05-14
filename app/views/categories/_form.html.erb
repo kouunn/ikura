@@ -1,3 +1,4 @@
+
 <%= form_for(@category) do |f| %>
   <% if @category.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +12,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
+  <div class="clearfix">
+    <%= f.label :分类名称 %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :parent_id %><br>
-    <%= f.select :parent_id, nested_set_options(Category) {|i| "#{'-' * i.level} #{i.name}" }, { selected: @category.parent_id, include_blank: true } %>
+  <div class="clearfix">
+    <%= f.label :父分类 %>
+        <%= f.select :parent_id, nested_set_options(Category) {|i| "#{'-' * i.level} #{i.name}" }, { selected: @category.parent_id, include_blank: true } %>
+    
   </div>
   
-  <div class="actions">
-    <%= f.submit %>
+  <div class="clearfix">
+    <%= f.submit :新建分类 %>
   </div>
 <% end %>
