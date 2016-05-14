@@ -1,0 +1,59 @@
+<div classs ="search-result">
+
+<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-list">
+					<div class="cbp-vm-options">
+						今日汇率：100日元=<%= @rate['showapi_res_body']['money'] %>元
+					</div>
+					<ul>
+						<li>
+							<div class="cbp-vm-details">
+
+								<%= image_tag "k_logo.png", height: '33', width: '101' %>
+							</div>
+							<a class="cbp-vm-image" href="#"><%= image_tag @k_product_picture %></a>
+
+
+
+							<h3 class="cbp-vm-title"><%= @k_product_title%></h3>
+							<div class="cbp-vm-price">￥<%= @k_product_price%>元</div>
+							
+							<div class="cbp-vm-details">
+								<%= link_to "帮我买",@k_product_url,class:"cbp-vm-icon cbp-vm-add"%>
+								<%= link_to "详情页",@k_product_url,class:"cbp-vm-icon cbp-vm-add"%>
+							</div>
+						</li>
+						<li>
+							<div class="cbp-vm-details">
+								<%= image_tag "a_logo.png", height: '33', width: '101' %>
+							</div>
+							<a class="cbp-vm-image" href="#"><%= image_tag @a_product_picture %></a>
+							<h3 class="cbp-vm-title"><%= @a_product_title%></h3>
+
+							<div class="cbp-vm-price">￥<%= @a_product_price%>元</div>
+								
+							
+							<div class="cbp-vm-details">
+
+								<%= link_to "帮我买",@k_product_url,class:"cbp-vm-icon cbp-vm-add"%>
+								<%= link_to "详情页",@a_product_url,class:"cbp-vm-icon cbp-vm-add"%>
+							</div>
+							
+						</li>
+						<li>
+							<div class="cbp-vm-details">
+								<%= image_tag "r_logo.png", height: '33', width: '101' %>
+							</div>
+							<a class="cbp-vm-image" href="#"><%= image_tag @r_product_picture %></a>
+							<h3 class="cbp-vm-title"><%= @r_product_title%></h3>
+							<div class="cbp-vm-price">￥<%= @r_product_price%>元</div>
+
+							<div class="cbp-vm-details">
+								<%= link_to "帮我买",@k_product_url,class:"cbp-vm-icon cbp-vm-add"%>
+								<%= link_to "详情页",@r_product_url,class:"cbp-vm-icon cbp-vm-add"%>
+							</div>
+						</li>
+						
+					</ul>
+				</div>	
+
+</div>

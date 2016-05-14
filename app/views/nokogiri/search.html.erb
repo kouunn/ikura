@@ -1,0 +1,9 @@
+<div class="field" id="searchform">
+
+  <%= form_tag({action: "search_result"}, method: "get") do %>
+    <%= text_field_tag(:searchterm,nil,placeholder:"请输入产品精确型号或产品日文/英文名称！") %>
+    <%= submit_tag("搜一搜") %>
+  <% end %>
+
+
+</div>

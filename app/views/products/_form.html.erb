@@ -1,0 +1,70 @@
+
+<%= form_for(@product,html: { class: "form-horizontal" } ) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">                  
+    <%= f.label :中文名称, class:"col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :name_cn,class:"form-control1" %>
+    </div>
+    <div class="col-sm-2 jlkdfj1">
+      <p class="help-block">Your help text!</p>
+    </div>
+  </div>
+
+  <div class="form-group">                    
+    <%= f.label :日文名称, class:"col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :name_jp,class:"form-control1" %>
+    </div>
+    <div class="col-sm-2 jlkdfj1">
+      <p class="help-block">Your help text!</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :分类, class:"col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.select :parent_id, nested_set_options(Category) {|i| "#{'-' * i.level} #{i.name}" }, { selected: 
+         @product.category_ids, include_blank: true },class:"form-control1" %>
+    </div>
+  </div>
+
+  <div class="form-group">                  
+    <%= f.label :价格, class:"col-sm-2 control-label" %>
+    <div class="col-sm-8">
+      <%= f.text_field :price,class:"form-control1" %>
+    </div>
+    <div class="col-sm-2 jlkdfj1">
+      <p class="help-block">Your help text!</p>
+    </div>
+  </div>
+
+  <div class="form-group">                
+      <%= f.label :产品介绍, class:"col-sm-2 control-label" %>
+      <div class="col-sm-8">
+      <%= f.text_area :introduction, cols: 20, rows: 40, class:"form-control1"%>
+      </div>
+  </div>
+  <%= f.file_field :avatars, multiple: true %>
+
+  <div class="orm-group">
+    <%= f.label :pic_url %>
+    <%= f.text_field :pic_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,66 @@
+<section>
+      <div id="page-wrapper" class="sign-in-wrapper">
+        <div class="graphs">     
+         
+          <div class="sign-in-form">
+            <div class="sign-in-form-top">
+              <h1>登录</h1>
+            </div>
+            
+            <div class="signin">
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="log-input">
+                  <div class="log-input-left">
+                     <%= f.text_field :email, autofocus: true,placeholder:" 请输入邮箱" %>
+                  </div>
+                  <span class="checkbox2">
+                     <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
+                  </span>
+                  <div class="clearfix"> </div>
+                </div>
+
+                <div class="log-input">
+                  <div class="log-input-left">
+                      <%= f.password_field :password, autocomplete: "off", placeholder:" 请输入密码" %>
+                  </div>
+                  <span class="checkbox2">
+                     <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
+                  </span>
+                  <div class="clearfix"> </div>
+                </div>
+
+                <% if devise_mapping.rememberable? -%>
+
+
+                  <div class="signin-rit">
+                    <span class="checkbox1">
+                       <label class="checkbox"><%= f.check_box :remember_me %>记住密码 ?</label>
+                    </span>
+                    <p><a href="#">忘记密码</a> </p>
+                    <div class="clearfix"> </div>
+                    <%= render "users/shared/links" %>
+                  </div>
+
+                <% end %>
+
+                <div class="actions">
+                  <%= f.submit "登录" %>
+                </div>
+             
+            </div>
+          <% end %>   
+            <div class="new_people">
+              <h2>加入我们</h2>
+              <p>Having hands on experience in creating innovative designs,I do offer design 
+                solutions which harness.</p>
+              <a href="register.html">现在 注册!</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+  </section>
+
+
+

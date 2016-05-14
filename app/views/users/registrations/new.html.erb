@@ -1,0 +1,67 @@
+
+<section>
+      <div id="page-wrapper" class="sign-in-wrapper">
+        <div class="graphs">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          
+          <div class="sign-up">
+            <h1>创建账户</h1>
+            <p class="creating"><%= devise_error_messages! %></p>
+            <h2>个人信息</h2>
+            <div class="sign-u">
+              <div class="sign-up1">
+                <h4>邮箱* :</h4>
+              </div>
+              <div class="sign-up2">
+                <form>
+                   <%= f.text_field :email, autofocus: true %>
+                </form>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+              <div class="sign-up1">
+                <h4>密码* :</h4>
+              </div>
+              <div class="sign-up2">
+                <form>
+                  <%= f.password_field :password, autocomplete: "off" %>
+                  <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                  <% end %><br />
+                 
+                 
+                </form>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+            <div class="sign-u">
+              <div class="sign-up1">
+                <h4>确认密码* :</h4>
+              </div>
+              <div class="sign-up2">
+                <form>
+                  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                </form>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+            <div class="sub_home">
+              <div class="sub_home_left">
+               
+                  <%= f.submit "注册" %>
+              
+              </div>
+              <div class="sub_home_right">
+                <p> 返 回 <a href="index.html"><%= render "users/shared/links" %></a></p>
+
+              </div>
+     
+              <div class="clearfix"> </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+
+  </section>
