@@ -1,2 +1,78 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+<%= @user.email%>
+
+<div class="submit-ad main-grid-border">
+    <div class="container">
+      <h2 class="head"><%=@user.user_name %>个人主页</h2>
+      <div class="post-ad-form">
+		
+		<%= form_for(@user) do |f| %>
+		  <% if @user.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+		      <ul>
+		      <% @user.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+
+		  <div class="clearfix">                  
+		    <%= f.label :用户名 %>
+		    <%= f.text_field :user_name %>
+		  </div>
+
+		  <div class="clearfix">                    
+		    <%= f.label :生日 %>    
+		    <%= f.text_field :birthday %>
+
+		  </div>
+
+		  <div class="clearfix">
+		      <%= f.label :性别 %> 
+		      <%# f.select :sex, {|i| "#{'-' * i.level} #{i.name}" }, { selected: 
+		         1, include_blank: true } %>
+		      男<%= f.radio_button :sex, '0', {:checked => true} %>
+		      女<%= f.radio_button :sex, '1', {:checked => true} %>
+		      保密<%= f.radio_button :sex, '1', {:checked => true} %>
+		   
+		  </div>
+
+		  <div class="clearfix">                  
+		    <%= f.label :社交账号 %>
+		   
+		      <%= f.text_field :contact %>
+		  </div>
+
+		  <div class="clearfix">                
+		      <%= f.label :个人签名 %>
+		     
+		      <%= f.text_area :introduction, placeholder:"随便写点东西。。。" %>
+		  
+		  </div>
+
+		  <div class="clearfix">                
+		      <%= f.label :上传文件 %>
+		     
+		        <%= f.file_field :icon, multiple: true %>
+		        <%= image_tag @user.icon%>
+		    
+		  </div>
+
+
+		  <p class="post-terms">感谢您对<a href="terms.html" target="_blank">ikura</a> 的贡献 <a href="terms.html" target="_blank">英雄</a> 后会 <a href="privacy.html" target="_blank">有期！</a></p>
+		  <div class="clearfix"></div>
+
+		  <div class="clearfix">
+		    <%= f.submit :发布%>
+		  </div>
+
+		<% end %>
+		<%= link_to '显示', @user %> |
+		<%= link_to '返回', current_user %>
+      </div>
+    </div>  
+</div>

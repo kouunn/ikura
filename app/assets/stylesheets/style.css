@@ -188,6 +188,7 @@ li.dropdown-header {
 }
 .header-right{
 	float:right;
+	margin-top: 10.5px;
 }
 .logo a {
 	font-family: 'Ubuntu Condensed', sans-serif;

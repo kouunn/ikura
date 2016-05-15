@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "一库拉 ikura.cn" %></title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-  </head>
-  <body>
 
   <div class="main-banner banner text-center">
     <div class="container">    
       <h1>日货百科   <span class="segment-heading">  日本电商价格查询   </span> 网友购物经验分享</h1>
       <p>ikura.cn 让您更好的淘日货！</p>
-      <a href="post-ad.html">加入我们</a>
+      <%= link_to "加入我们", new_user_registration_path %>
     </div>
   </div>
       
@@ -333,9 +321,3 @@
       </div>
     </div>
   </div>
-
-
-
-
-  </body>
-</html>

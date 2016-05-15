@@ -28,6 +28,9 @@ gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 # 页面加载进度条
 gem 'nprogress-rails'
 
+#bootstrap
+gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

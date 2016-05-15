@@ -2,18 +2,18 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1>产品列表</h1>
 
 
 
 <table>
   <thead>
     <tr>
-      <th>Name cn</th>
-      <th>Name jp</th>
-      <th>Price</th>
-      <th>Introduction</th>
-      <th>Pic url</th>
+      <th>中文名称</th>
+      <th>日文名称</th>
+      <th>价格</th>
+      <th>介绍</th>
+      <th>照片路径</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,9 +26,9 @@
         <td><%= product.price %></td>
         
         <td><%= product.pic_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '显示', product %></td>
+        <td><%= link_to '编辑', edit_product_path(product) %></td>
+        <td><%= link_to '删除', product, method: :delete, data: { confirm: '确定要删除么，少年?' } %></td>
       </tr>
     <% end %>
   </tbody>
