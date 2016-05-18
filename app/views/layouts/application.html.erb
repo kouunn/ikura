@@ -67,7 +67,7 @@
 
                         <% if signed_in? %>
                           <li><%= link_to "个人主页", current_user %></li>
-                          <li><%= link_to "编辑资料", current_user %></li>
+                          <li><%= link_to "编辑资料", edit_user_path(current_user) %></li>
                           <li> <%= link_to "登出", destroy_user_session_path,html_options = { method: "delete"} %></li>
                         <% else %>
                           <li><%= link_to "注册", new_user_registration_path %></li>

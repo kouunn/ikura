@@ -65,18 +65,18 @@ class NokogiriController < ApplicationController
 
  				rescue Encoding::UndefinedConversionError
  					
- 					redirect_to root_path, alert:"没有找到与 “#{params[:searchterm]}” 相关的产品！"
+ 					redirect_to nokogiri_search_path, alert:"没有找到与 “#{params[:searchterm]}” 相关的产品！"
 
  				rescue OpenURI::HTTPError
  					
- 					redirect_to root_path, notice:"请输入搜素关键字!"	
+ 					redirect_to nokogiri_search_path, notice:"请输入搜素关键字!"	
  				
  				ensure #不管有没有异常，进入该代码块
 
 	 				#Amazon
 
 	 				begin
-						amazon_tmp_file = open("http://www.amazon.co.jp/s/ref=nb_sb_noss_2?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=#{CGI.escape @key_word}")
+						amazon_tmp_file = open("http://www.amazon.co.jp/s/field-keywords=#{CGI.escape @key_word}")
 		 			    doc = Nokogiri::HTML(amazon_tmp_file)
 
 		 				product_css_class         =".s-item-container"
@@ -96,11 +96,11 @@ class NokogiriController < ApplicationController
 
  					rescue Encoding::UndefinedConversionError
  						
- 						redirect_to root_path, alert:"没有找到与 “#{params[:searchterm]}” 相关的产品！"
+ 						redirect_to nokogiri_search_path, alert:"没有找到与 “#{params[:searchterm]}” 相关的产品！"
 
  					rescue OpenURI::HTTPError
  						
- 						redirect_to root_path, notice:"请输入搜素关键字!"
+ 						redirect_to nokogiri_search_path, notice:"请输入搜素关键字!"
 	 			
 
 	 				
@@ -155,7 +155,7 @@ class NokogiriController < ApplicationController
  				
  			#rescue 
 
- 				#redirect_to root_path, alert:"没有找到与 “#{params[:searchterm]}” 相关的产品！"
+ 				#redirect_to nokogiri_search_path, alert:"没有找到与 “#{params[:searchterm]}” 相关的产品！"
 
 				
 			 

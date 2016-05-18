@@ -1,9 +1,14 @@
-<div class="field" id="searchform">
 
-  <%= form_tag({action: "search_result"}, method: "get") do %>
-    <%= text_field_tag(:searchterm,nil,placeholder:"请输入产品精确型号或产品日文/英文名称！") %>
-    <%= submit_tag("搜一搜") %>
-  <% end %>
+<!--search start here-->
+<div class="search">
+  <i> </i>
+  <div class="s-bar">
 
+    	<%= form_tag({action: "search_result"}, method: "get") do %>
+    	  <%= text_field_tag(:searchterm,nil,value:"请输入产品精确型号或产品日文/英文名称！",onfocus:"this.value = '';",onblur:"if (this.value == '') {this.value = '请输入产品精确型号或产品日文/英文名称！';}") %>
+    	  <%= submit_tag("搜一搜") %>
+    	<% end %>
 
+  </div>
+  <p>热门搜索: <a href="#">d810,</a> <a href="#"> gtx750 </a></p>
 </div>
