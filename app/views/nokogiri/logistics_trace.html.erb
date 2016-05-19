@@ -1,0 +1,102 @@
+
+<h2>物流查询</h2>
+
+<h2>物流号码: <%= @logistics_id%></h2>
+<h2>物流类型: <%= @logistics_type %></h2>
+<h2>物流历史: <%= @logistics_history_time %></h2>
+
+
+
+<form name="srv_searchActionForm" method="post" action="/services/srv/search/" class="">
+        <h1 class="ttl_line m_b20" style="text-align: center;">検索結果 詳細<br>
+            [国際]
+        </h1>
+
+        <div class="indent">
+            
+            
+            
+            
+            
+            
+            
+                
+            
+            
+            
+                
+                
+                
+                
+                
+                    <div class="beige_box m_b15">
+                        <h2 class="beige_box_inner txt_type06 bold">配達状況詳細</h2>
+                    </div>
+            <table class="tableType01 txt_c m_b5" summary="配達状況詳細">
+	              <tbody>
+	              <tr>
+	                        <th scope="row" class="bg01 w_180">お問い合わせ番号</th>
+	                        <th scope="row" class="bg01 w_380">商品種別</th>
+	                        <th scope="row" class="bg01 w_100">付加サービス</th>
+	              </tr>
+	              <tr>
+	                
+	                    
+	                        <td class="w_180">CD 245 505 083 JP</td>
+	                        <td class="w_380">国際小包</td>
+	                        <td class="w_100"></td>
+	                    
+	                
+	              </tr>
+	              
+	            </tbody>
+            </table>
+            <table class="tableType01 txt_c m_b5" summary="履歴情報">
+              <tbody><tr>
+                
+                    
+                        <th scope="row" rowspan="2" class="bg01 w_120">状態発生日<br>（海外で発生した場合は現地時間）</th>
+                    
+                    
+                
+                <th scope="row" rowspan="2" class="bg01 w_150">配送履歴</th>
+                <th scope="row" rowspan="2" class="bg01 w_180">詳細</th>
+                <th scope="row" class="bg01 w_105">取扱局</th>
+                
+                    
+                        <th scope="row" rowspan="2" class="bg01 w_105">県名・国名</th>
+                    
+                    
+                
+              </tr>
+              <tr>
+                <th scope="row" class="bg01 w_105">郵便番号</th>
+              </tr>
+              
+                  <tr>
+                    <td rowspan="2" class="w_120">2016/05/19 18:26</td>
+                    <td rowspan="2" class="w_150">引受</td>
+                    <td rowspan="2" class="w_180"></td>
+                    <td class="w_105">瀬戸郵便局</td>
+                    <td rowspan="2" class="w_105">愛知県</td>
+                  </tr>
+                  <tr>
+                    <td class="w_105">489-8799</td>
+                  </tr>
+              
+            </tbody>
+
+            </table>
+
+            
+            
+        </div>
+    
+        
+        
+            
+                
+                   
+        
+        
+    </form>

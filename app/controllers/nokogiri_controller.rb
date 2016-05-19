@@ -177,5 +177,38 @@ class NokogiriController < ApplicationController
 
 	end
 
+	def logistics_trace
+		@key_word = "cd245505083jp"
+		post_tmp_file = open("https://trackings.post.japanpost.jp/services/srv/search/?requestNo1=#{CGI.escape @key_word}&search=%E8%BF%BD%E8%B7%A1%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88")
+		 			    doc = Nokogiri::HTML(post_tmp_file)
+
+		 			    		#logistics = doc.css(".m_b5")
+		 			    		logistics = doc.css(".w_180")
+
+		 			    		logistics_id_css_class   ="td"
+		 			    		@logistics_id =  logistics.css(logistics_id_css_class ).text
+
+		 			    		logistics = doc.css(".w_380")
+		 			    		@logistics_type=  logistics.css(logistics_id_css_class ).text
+
+		 			    		logistics = doc.css(".w_120")
+		 			    		@logistics_history_time =  logistics.css(logistics_id_css_class ).text
+
+
+		 			    		@doc=doc
+				 				#product_typle_css_class = doc.css(".w_180")	
+
+				 				
+				 				#@product = doc.css(".w_180").attribute("th");
+		 					    #@product_title =  product.css(product_title_css_class).text#title_nodes[0].text
+		 					    #@product_title =  product.css(product_type_css_class).text
+		 					    #@product_title =  product.css(product_title_css_class).second.text
+		 						#@r_product_price =  (r_product.css(product_price_css_class).first.text.gsub(/\D/, '').to_f*@rate['showapi_res_body']['money'].to_f/100).to_i#[/[0-9]+/]
+		 						#@r_product_picture = r_product.xpath(product_picture_css_class).first.text 					  
+		 						#@r_product_url   = r_product.css(product_url_css_class).attribute("href").text#[/https?:\/\/[\S]+/]
+		
+	end
+
+
 
 end

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'nokogiri/search_result'
 
+  get 'nokogiri/logistics_trace'
+
   get 'users/show'
 
   get 'pages/home'

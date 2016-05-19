@@ -1,0 +1,37 @@
+<div class="header">
+  <div class="container">
+
+    <div class="logo">
+      <a href="/"><span>iku</span>ra</a>
+    </div>
+    
+    <div class="header-right">
+
+         <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "首页", root_path %></li>
+            <li><%= link_to "日货百科", categories_path %></li>
+            <li><%= link_to "价格查询", nokogiri_search_path %></li>
+            <li><%= link_to "物流查询", nokogiri_logistics_trace_path %></li>
+
+            <li class="dropdown">
+            <%= link_to '#', class: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false' do %>
+               我的账户
+               <span class="caret"></span>
+            <% end %>
+              <ul class="dropdown-menu">
+
+                 <% if signed_in? %>
+                   <li><%= link_to "个人主页", current_user %></li>
+                   <li><%= link_to "编辑资料", edit_user_path(current_user) %></li>
+                   <li> <%= link_to "登出", destroy_user_session_path,html_options = { method: "delete"} %></li>
+                 <% else %>
+                   <li><%= link_to "注册", new_user_registration_path %></li>
+                   <li><%= link_to "登录", new_user_session_path %></li>
+                 <% end %>
+              </ul>
+            <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe></li>
+          </ul>
+
+    </div>
+  </div>
+</div>
