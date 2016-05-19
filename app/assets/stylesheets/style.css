@@ -41,7 +41,7 @@ label{
 	margin:0;
 }
 .banner {
-	background:url('/assets/banner.jpg') no-repeat 0px 0px;
+	background-image:url('/assets/banner.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:240px;
 	padding:45px 0 0 0;
