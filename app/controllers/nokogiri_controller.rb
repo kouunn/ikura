@@ -15,6 +15,7 @@ class NokogiriController < ApplicationController
 
 	def search
 		render layout: 'search_index'
+		
 	end
 
 	def search_result

@@ -14,7 +14,8 @@
 .s-bar input[type="text"] {
   font-size: 1em;
   font-weight: 600;
-  color: #fff;
+  color: black;
+
   padding: 1.3em 1em 1.3em 1.5em;
   width: 70%;
  text-shadow: rgba(80, 80, 80, 0.08) 1px 1px, 
@@ -30,6 +31,12 @@
   border: none;
   outline: none;
   -webkit-appearance: none;
+
+
+  background:#f3c500;
+
+
+
 }
 .s-bar input[type="submit"]{
   font-size: 1em;
@@ -59,7 +66,7 @@
   background: -webkit-linear-gradient(top, #7ac209 0%,#7ac209 37%,#7ac209 66%,#7ac209 100%);
   background: -o-linear-gradient(top, #7ac209 0%,#7ac209 37%,#7ac209 66%,#7ac209 100%);
   background: -ms-linear-gradient(top, #7ac209 0%,#7ac209 37%,#7ac209 66%,#7ac209 100%);
-  background: linear-gradient(to bottom, #8EDB15 0%,#8EDB15 37%,#8EDB15 66%,#8EDB15 100%);
+  background: linear-gradient(to bottom, #00C78A 0%,#00C78A 37%,#00C78A 66%,#00C78A 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ac209', endColorstr='#7ac209',GradientType=0 );
 }
 .s-bar input[type="submit"]:hover{
@@ -249,28 +256,17 @@
 
 
 
-/*----------------------------- 樱花飘舞背景----------------------------------*/
-
-canvas {
-
-    padding:0;
-
-    margin:0;
-
-    position:fixed;
-    z-index: -9999;
+.search-area{
+  padding: 3em 1em 1em 1em;
+  letter-spacing: -1px;
+  text-align: center;
 
 }
-/*----------------------------- END OF 樱花飘舞背景---------------------------------*/
 
 .search-area div.content {
 
   width: 100%;
-  height: 0%;
-  top: 20%;
-  position: fixed;
-  left: 0px;
-  right: 0px;
+  height: 100%;
   max-width: none;
   background: rgba(255,255,255,0.5);
   text-align: center;
@@ -293,12 +289,7 @@ canvas {
 
 }
 
-.search-area{
-  padding: 1em 190px 1em;
-  letter-spacing: -1px;
-  text-align: center;
 
-}
 .search-area h1 {
   color: #447a3da;
   font-weight: 600;
