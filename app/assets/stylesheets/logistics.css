@@ -1,0 +1,106 @@
+.bold {
+    font-weight: bold;
+}
+.txt_type06 {
+    font-size: 120%;
+}
+.beige_box_inner {
+    padding: 10px 20px;
+    background: #ccc left bottom no-repeat;
+    margin: 10px auto;
+}
+/*+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
++-----+// Table style
+--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+*/
+
+.tableType01{
+	width:100%;
+	border-left:solid 1px #999999;
+	border-top:solid 1px #999999;
+}
+
+.tableType01 th,.tableType01 td{
+	border-right:solid 1px #999999;
+	border-bottom:solid 1px #999999;
+	padding:5px;
+}
+
+.tableType03{
+	width:50%;
+	border-left:solid 1px #999999;
+	border-top:solid 1px #999999;
+}
+
+.tableType03 th,.tableType03 td{
+	border-right:solid 1px #999999;
+	border-bottom:solid 1px #999999;
+	padding:5px;
+}
+
+.tableType02{width:100%;}
+
+.tableType02 th{background:#ebe5e1;padding:10px;}
+.tableType02 td{padding:10px;}
+
+.tableType02 .bd01{border-bottom:solid 1px #fff;}
+.tableType02 .bd02{border-bottom:solid 1px #cccccc;}
+
+
+.tableType01 .bg_type01{background:#d70012;color:#fff;}
+.tableType01 .bg_type02{background:#f7ccd0;}
+.tableType01 .border_rw{border-right:solid 1px #ffffff;}
+
+.tableType03 .bg_type01{background:#d70012;color:#fff;}
+.tableType03 .bg_type02{background:#f7ccd0;}
+.tableType03 .border_rw{border-right:solid 1px #ffffff;}
+
+.cell_c td,
+.cell_c th{ text-align:center;}
+
+table .bg01{background:#ebe5e1;}
+table .bg02{background:#f9f7f6;}
+table .bg03{background:#fffbe8;}
+
+table.txt_c th,table.txt_c td{text-align:center;}
+
+
+
+
+
+
+
+
+/*+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
++-----+// width
+--+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+*/
+.w_50{width:50px;}
+.w_70{width:70px;}
+.w_80{width:80px;}
+.w_100{width:100px;}
+.w_105{width:105px;}
+.w_120{width:120px;}
+.w_140{width:140px;}
+.w_150{width:150px;}
+.w_155{width:155px;}
+.w_158{width:158px;}
+.w_164{width:164px;}
+.w_170{width:170px;}
+.w_180{width:180px;}
+.w_200{width:200px;}
+.w_210{width:210px;}
+.w_233{width:233px;}
+.w_250{width:250px;}
+.w_300{width:300px;}
+.w_320{width:320px;}
+.w_327{width:327px;}
+.w_328{width:328px;}
+.w_350{width:350px;}
+.w_380{width:380px;}
+.w_400{width:400px;}
+.w_450{width:450px;}
+.w_470{width:470px;}
+.w_480{width:480px;}
+.w_500{width:500px;}
+.w_550{width:550px;}
+.w_600{width:600px;}
+.w_650{width:650px;}

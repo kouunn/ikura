@@ -41,13 +41,13 @@ label{
 	margin:0;
 }
 .banner {
-	background-image:url('/assets/banner.jpg') no-repeat 0px 0px;
+	background:url('banner.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:240px;
 	padding:45px 0 0 0;
 }
 .main-banner {
-	background:url('/assets/banner.jpg') no-repeat 0px 0px;
+	background:url('banner.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:400px;
 	padding:100px 0 0 0;
@@ -2461,13 +2461,6 @@ h2.sear-head.fer {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin transform($transform){
-  -webkit-transform: $transform;
-  -moz-transform: $transform;
-  -ms-transform: $transform;
-  -o-transform: $transform;
-  transform: $transform;
-}
 
 @media screen and (max-width: 479px) {
   .nav-tabs-responsive {
@@ -3495,25 +3488,25 @@ label {
 	i.postanad {
 		width: 70px;
 		height: 70px;
-		background: url('../images/img-sprite.png') no-repeat 3px -93px;
+		background: url('img-sprite.png') no-repeat 3px -93px;
 		background-size: 800px;
 	}
 	i.finditem {
 		width: 70px;
 		height: 70px;
-		background: url('../images/img-sprite.png') no-repeat -62px -93px;
+		background: url('img-sprite.png') no-repeat -62px -93px;
 		background-size: 800px;
 	}
 	i.contact-seller {
 		width: 70px;
 		height: 70px;
-		background: url('../images/img-sprite.png') no-repeat -126px -93px;
+		background: url('img-sprite.png') no-repeat -126px -93px;
 		background-size: 800px;
 	}
 	i.maketransaction {
 		width: 70px;
 		height: 70px;
-		background: url('../images/img-sprite.png') no-repeat -191px -93px;
+		background: url('img-sprite.png') no-repeat -191px -93px;
 		background-size: 800px;
 	}
 	span.arrow2 {
